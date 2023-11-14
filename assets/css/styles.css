@@ -121,7 +121,7 @@ header {
     background-size: cover; 
     /* el fondo cubre todo*/
     background-repeat: no-repeat;
-    background-attachment: fixed; 
+    background-attachment: fixed;
     /*La imagen se queda fija al hacer scroll*/
 
 }
