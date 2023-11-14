@@ -13,32 +13,51 @@
 
 @font-face {
     font-family:"fuente1";
-    src: url("../fonts/Roboto_Slab/static/RobotoSlab-Regular.ttf");
+    src: url("../fonts/Oswald/static/Oswald-Bold.ttf");
     /* ../ para ir atras en la carpeta */
 }
 
 @font-face {
-    font-family: ;
-    src: url();
-}
+    font-family:"fuente2";
+    src: url(../fonts/Roboto_Slab/RobotoSlab-VariableFont_wght.ttf);
+} 
 
-@font-face {
-    font-family: ;
-    src: url();
-}
+
+
 
 :root {
     /* #hexadecimal RGB RGBa con transparencia */
     --color0:white;
     --color1:black;
     --color2:grey;
-    --color3:yellow;
+    --color3:rgb(116, 116, 116);
     --fuente1:"fuente1";
 
 }
 
+/* ESTILOS GENERICOS */
+h1{
+    font-size: var(--fuente1);
+    font-size: 1.4rem;
+    color: var(--color1);
+}
 
+h2 {
+    font-size: 1.8rem;
+    color: var(--color2);
+    font-weight: 100;
+}
 
+h3 {
+        font-size: 2rem;
+        color: var(--color1) ;
+        font-weight: 100;
+}
+
+h4 {
+    font-size: 1.2rem;
+    font-family: var(--fuente1);
+}
 
 
 
@@ -125,3 +144,154 @@ header {
     /*La imagen se queda fija al hacer scroll*/
 
 }
+
+header .contenedor {
+    margin-top: 5vh;
+    margin-left: 2rem;
+
+    width: 700px;
+
+    display: flex;
+    flex-direction:column;
+    align-items: flex-start;
+    justify-content: flex-start;
+
+    font-family: var(--fuente1);
+    color: var(--color0);
+    user-select: none;
+}
+
+header .contenedor :nth-child(1){
+    font-size: 7.7vw;
+    line-height: 7vw;
+}
+
+header .contenedor :nth-child(2){
+    font-size: 5vw;
+    line-height: 4.6vw;
+}
+
+header .contenedor :nth-child(3){
+    font-size: 12vw;
+    line-height: 11vw;
+}
+
+header .contenedor :nth-child(4){
+    font-size: 4.05vw;
+    line-height: 5vw;
+}
+
+header .contenedor :nth-child(5){
+    font-size: 8vw;
+    line-height: 6vw;
+}
+
+header .contenedor :nth-child(6){
+    font-size: 6vw;
+    line-height: 5.9vw;
+}
+header .contenedor :nth-child(7){
+    font-size: 16.1vw;
+    line-height: 12vw;
+}
+header .contenedor :nth-child(8){
+        font-size: 2vw;
+        line-height: 5vw;
+}
+
+
+/* MAIN */
+/* SECCION PRESENTACION */
+
+#sectPresentacion{
+    background-color: aquamarine;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-top: 2rem;
+
+}
+
+#sectPresentacion article{
+    background-color: antiquewhite;
+    max-width: 1200px;
+    width: 95%;
+    margin-top: 2rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+
+}
+
+.boton  { /* estilo boton */
+    background-color: var(--color0);
+
+    padding: .5rem 2rem; 
+    /* un valor - afecta a todos lados / dos valores alto y ancho .5=0.5*/
+    border-radius: 1rem;
+    border: .5px solid var(--color1);
+    /* tiene tres valores */
+    cursor: pointer;
+}
+
+.boton:hover { /* camnbio al poner encima */
+    background-color: black;
+    border-color: var(--color0);
+    color:var(--color0);
+    transition: 0.1s; /* tiempo de transcion que afecta */
+ }
+
+ .boton:active { /* cambios al clickar */
+    transform: scale(0.9);
+    transition: 0.5s; /* tiempo de transcion que afecta */
+ }
+
+ #contenedorServicios {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2rem;
+    flex-wrap: wrap;/* para respete el ancho de cada hijo */
+ }
+
+ #contenedorServicios .servicio {
+    width: 100%;
+    max-width: 550px;
+    min-width: 320px;
+    height: 800px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    row-gap: 1rem;
+
+    background-color: brown;
+ }
+
+ #contenedorServicios .servicio .contenedor_foto {
+    width: 100%;
+    height: 80%;
+    overflow: hidden;
+ }
+
+ #contenedorServicios .servicio .contenedor_foto img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0);
+    
+ }
+
+ #contenedorServicios .servicio .contenedor_foto img:hover {
+    filter: saturate(1);
+    transform: scale(1.1);
+    transition: 0.5ms;
+    
+ }
