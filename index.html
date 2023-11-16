@@ -2,6 +2,7 @@
 <!--escribir html en minuscula-->
 <!-- Shift ALT A comentarios -->
 <!-- ALT z para que los textos se ajusten en el visualstudio -->
+<!-- elegir pañabra Ctrl-F para buscar donde hay mas y poder reemplazar -->
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,6 +11,7 @@
     <link rel="stylesheet" href="assets/css/styles.css"><!-- hoja de estilos -->
 </head>
 <body>
+
     <nav>
         <div class="sup"><!-- .inf crea div con clase, #inf crea div con ID -->
             <img src="./assets/img/LOGO_180.png" alt="">
@@ -19,12 +21,14 @@
             <ul>
             <!-- lista / li*Numero de elementos de la lista -->
                 <li><a href="">Quienes somos</a></li>
-                <li><a href="">Servicios</a></li>
+                <li><a href="#hitoservicios">Servicios</a></li>
+                <li><a href="#hitoAlbum">Album</a></li>
                 <li><a href="">Contacto</a></li>
                 
             </ul>
         </div>
     </nav>
+
     <header>
         <div class="contenedor">
             <p>LA FOTOGRAFÍA</p>
@@ -36,16 +40,20 @@
             <p>MUNDO</p>
             <p>-Bruno Barbay -</p>
         </div>
-        <section id="sectPresentacion">
+    </header>
+
+    <main>
+        <!-- SECCION SERVIOS --> 
+        <section>
+            <div id="hitoservicios"></div>
             <h2>Nuestros servicios fotograficos</h2>
-            <article>
+            <article class="anchoEstrecho">
                 <h3>TUS FOTÓGRAFOS EN DONOSTIA</h3>
                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum autem at repellat sapiente? Laudantium, beatae molestiae. Rem earum laudantium quam mollitia eius corrupti debitis dolore nisi dolores minus? Necessitatibus, facere!</p>
-                <p></p>
                 <div class="boton">Boton</div>
             </article>
-            
-            <article>
+
+            <article class="anchoEstrecho">
                 <h3>SOMOS UN EQUIPO</h3>
                 <p>Lorem, ipsum dolor sit amet consectetur <b>adipisicing</b> elit. Facilis, in.</p>
                 <div id="contenedorServicios">
@@ -94,7 +102,21 @@
                 </div>
             </article>
         </section>
-    </header>
+        
+        <!-- SLIDER ALBUM -->
+        <section>
+            <div id="hitoAlbum"></div>
+            <H2>Albumes fotográficos a medida</H2>
+            <article>
+                <div id="slider">
+                    <img id="flechaIza" src="./assets/img/flecha_izd.png">
+                    <img id="flechaDer" src="./assets/img/flecha_der.png">
+                    <img id="fotoActiva" orden="1"src="./assets/img/slider1_2560.jpg">
+                </div>
+                <h3 class="anchoEstrecho">El mejor album fottográfico para recordad los momentos más especiales</h3>
+            </article>
+        </section>       
+    </main>
     
 </body>
 </html>
