@@ -331,7 +331,7 @@ header .contenedor :nth-child(8){
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    /* Alineado 50% Y EL TRANSLATE LO SUBE AL 50% DE SU TAMAÑO-certrado */
+    /* Alineado 50% Y EL TRANSLATE LO SUBE AL 50% DE SU TAMAÑO-certrado translateY(VERTICAL) translateX(Horizontal) translate(-50%,-50%)*/
 }
 
 #slider :nth-child(1) {
