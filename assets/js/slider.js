@@ -2,7 +2,7 @@
 var numfotos=12
 var ordenprincipal
 var ordensiguiente
-var intervalo,temporizador
+var intervalo
 var tiempoespera=5000
 
 
@@ -23,9 +23,8 @@ flechaIzd.addEventListener("click",function(){
     }
     fotoActiva.src=`./assets/img/slider${ordensiguiente}_2560.jpg`
     fotoActiva.setAttribute("orden",ordensiguiente)
+    crearIntervalo(tiempoespera+2000)
 
-    clearInterval(intervalo)
-    crearIntervalo()
 })
 
 /* escuchamos click flecha derecha */
@@ -39,9 +38,8 @@ flechaDer.addEventListener("click",function(){
     }
     fotoActiva.src=`./assets/img/slider${ordensiguiente}_2560.jpg`
     fotoActiva.setAttribute("orden",ordensiguiente)
+    crearIntervalo(tiempoespera+2000)
 
-    clearInterval(intervalo)
-    crearIntervalo()
 })
 
 
@@ -50,7 +48,7 @@ flechaDer.addEventListener("click",function(){
 funcion_random ()
 
 /* AutoPlay - cambia de imagen cada 5 segundos */
-crearIntervalo()
+crearIntervalo(tiempoespera)
 
 /*---------------------------ZONA DE FUNCIONES----------------------------------- */
 
@@ -69,8 +67,11 @@ function funcion_random (){
 }
 
 /* AutoPlay - camnbio automatico de imagenes cada X segundos */
-function crearIntervalo(){
-    intervalo=window.setInterval(funcion_random,5000)
+function crearIntervalo(tiempoespera){
+    if(intervalo != undefined){
+        clearInterval(intervalo)
+    }
+    intervalo=window.setInterval(funcion_random,tiempoespera)
 }
 
 console.log(numaleatorio)
