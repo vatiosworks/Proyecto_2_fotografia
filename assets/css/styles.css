@@ -48,17 +48,37 @@ h2 {
     color: var(--color2);
     font-weight: 100;
 }
+@media only screen and (max-width:540px){
+    h2{
+        padding: 0 1rem;
+    }
+}    
 
 h3 {
     font-size: 2rem;
     color: var(--color1) ;
     font-weight: 100;
+    text-align: left;
+    margin-top: 2rem;
 }
 
 h4 {
     font-size: 1.2rem;
     font-family: var(--fuente1);
+    font-weight: 100;
 }
+
+p {
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.6rem;
+}
+@media only screen and (max-width:540px){
+    p{
+        padding: 0 1rem;
+    }
+}
+
 
 section, article{
     width: 100%;
@@ -83,6 +103,11 @@ section, article{
 
 /* Estilos barra de menu */
 
+#toggle, .contenedor_span{
+    display: none;
+}
+
+
 nav, header, main, footer{
     width: 100%;
     max-width: 2560px;
@@ -101,7 +126,7 @@ nav {
 nav .sup {
     width: 100%;
     height: 5vh;/* vh viewport height vw viewport width */
-    max-height: 40px;
+    /*  max-height: 40px; */
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -125,7 +150,8 @@ nav .inf {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    max-height: 40px;
+    /* max-height: 40px; */
+    background-color: var(--color0);
 }
 
 nav .inf ul {
@@ -147,6 +173,79 @@ nav .inf a:hover {
     /* :hover - seudoclase cuando pones el raton encima */ 
     color: rgb(91, 165, 42);
     font-weight: bold;
+}
+
+@media only screen and (max-width:540px){
+    .contenedor_span{
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index:900;
+
+        width: 30px;
+        height: 30px;
+        display: flex;
+        flex-flow: row wrap; /* wrap para que se apilen, ahora son 3 en 3 lineas */
+        align-items: center;
+        cursor: pointer;
+    }
+
+    .contenedor_span span {
+        width: 100%;
+        height: 3px;
+        background: var(--color1);
+        transition: all 250ms ease-out;
+        transform-origin: 0 0;
+    }
+
+    nav .sup{
+        background-color: var(--color0);
+        height: 10vh;
+    }
+
+    nav .inf{
+        position: relative;
+        left: 100%;
+        background-color: var(--color0);
+        width: 100%;
+        height: 90vh;/* para no pisar el navegador */
+        background-color: var(--color0);
+        flex-direction: column;
+        justify-content: flex-start;
+        padding-top: 2rem;
+    }
+
+    nav .inf ul{
+        border-left: 2px solid var(--color3);
+        flex-direction: column;
+        row-gap: 3rem;
+        align-items: flex-start;
+        padding-left: 1rem;
+    }
+
+    nav .inf ul li{
+        font-size: 2rem;
+    }
+
+    #toggle:checked ~ .contenedor_span span:nth-last-child(1){
+        transform: rotate(-45deg) translate(-1px, 0px);
+    }
+    
+    #toggle:checked ~ .contenedor_span span:nth-last-child(2){
+        transform: rotate(0deg)scale(0.2, 0.2);
+        opacity: 0;
+    }
+
+    #toggle:checked ~ .contenedor_span span:nth-last-child(3){
+        transform: rotate(45deg) translate(-1px, 0px);
+    }
+
+    #toggle:checked ~ nav .inf{
+        left: 0;
+    }
+
+
+
 }
 
 
@@ -336,8 +435,24 @@ header .contenedor :nth-child(8){
     left: 2rem;
 }
 
+
 #slider :nth-child(2) {
     right: 2rem;
+}
+
+@media only screen and (max-width:540px){
+    #slider :nth-child(1), #slider :nth-child(2){
+        width: 96px;
+    }
+    
+    #slider :nth-child(1) {
+        left: 1rem;
+    }
+
+
+    #slider :nth-child(2) {
+        right: 1rem;
+    }
 }
 
 #fotoActiva {
@@ -353,6 +468,7 @@ header .contenedor :nth-child(8){
     flex-direction: row; /* en linea */
     justify-content: center; /* eje horizontal */
     align-items: flex-start; /* eje vertical */
+    flex-wrap: wrap;
     column-gap: 2rem;
 }
 
@@ -367,7 +483,7 @@ header .contenedor :nth-child(8){
 }
 
 .persona .imagen {
-    width: 100%;
+    width: 350px;
     height: 350px;
     position: relative;
 }
@@ -558,7 +674,7 @@ header .contenedor :nth-child(8){
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    column-gap: 2rem;
+    row-gap: 2rem;
 }
 
 footer form {
