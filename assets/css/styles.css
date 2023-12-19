@@ -120,7 +120,6 @@ nav, header, main, footer{
 nav {
     position: fixed;
     z-index: 100;
-    background-color: var(--color0);
 }
 
 nav .sup {
@@ -136,7 +135,7 @@ nav .sup {
 }
 
 nav .sup img { /* img no es una clase, no punto */
-    height: 70px;
+    height: 52px;
     position: absolute;
     left:1rem;
     top:0.5rem;
