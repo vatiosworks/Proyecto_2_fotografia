@@ -38,6 +38,7 @@
     </nav>
 
     <header>
+        <div id="inicio"></div>
         <div class="contenedor">
             <p>LA FOTOGRAFÍA</p>
             <p>ES EL ÚNICO Y GENUÍNO</p>
@@ -176,29 +177,29 @@
 
 <footer class="bg-dark">
     <div id="contenedor_form">
-        <form action=""method="post">
+        <form action="./php/enviar.php"method="post">
             <h2>Contacta con nosotros</h2>
-            <input type="text" required></input>
-            <input type="email"required></input>
-            <input type="tel"required></input>
-            <textarea></textarea>
-            <input class="boton" id="boton_enviar" type="submit" value="ENVIAR">
+            <input type="text" name="nombre" minlength="4" maxlength="40" placeholder="Nombre (mínimo 4 carácteres )" required>
+            <input type="email"name="correo" maxlength="100" placeholder="Correo" required>
+            <input type="tel" name="telefono" placeholder="Teléfono">
+            <textarea name="mensaje" minlength="10" maxlength="500" placeholder="Escriba aquí su mensaje"></textarea>
+            <input type="submit" class="boton" id="boton_enviar" value="ENVIAR">
         </form>
-        <img></img>
+        <img src="./assets/img/servicio_4_600.jpg"></img>
     </div>
     <div id="contenedor_footer">
        
-        <img id="logo_footer" href="#inicio" src="./assets/img/LOGO_500.png" alt="logo">
+        <img id="logo_footer" src="./assets/img/LOGO_500.png" alt="logo">
 
         <div>
 
             <div class="info_footer">
                 <h4>Mapa Web</h4>
                 <ul>
-                    <li href="#inicio">Inicio</li>
-                    <li href="#hitoservicios">Servicios</li>
-                    <li href="#hitoAlbum">Album</li>
-                    <li href="#hitocontacto">Contacto</li>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#hitoservicios">Servicios</a></li>
+                    <li><a href="#hitoAlbum">Album </a></li>
+                    <li><a href="#hitocontacto">Contacto</a></li>
                 </ul>
             </div>
 

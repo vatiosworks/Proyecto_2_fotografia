@@ -38,15 +38,17 @@
 
 /* ESTILOS GENERICOS */
 h1{
-    font-size: var(--fuente1);
+    font-family: var(--fuente1);
     font-size: 1.4rem;
     color: var(--color1);
 }
 
 h2 {
+    font-family: var(--fuente1);
     font-size: 1.8rem;
     color: var(--color2);
     font-weight: 100;
+    text-align: center;
 }
 @media only screen and (max-width:540px){
     h2{
@@ -55,10 +57,11 @@ h2 {
 }    
 
 h3 {
+    font-family: var(--fuente1);
     font-size: 2rem;
     color: var(--color1) ;
     font-weight: 100;
-    text-align: left;
+    text-align: center;
     margin-top: 2rem;
 }
 
@@ -78,7 +81,10 @@ p {
         padding: 0 1rem;
     }
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 
 section, article{
     width: 100%;
@@ -123,6 +129,7 @@ nav, header, main, footer{
 nav {
     position: fixed;
     z-index: 100;
+    top: 0;
 }
 
 nav .sup {
@@ -261,7 +268,7 @@ header {
     /* el fondo cubre todo*/
     background-repeat: no-repeat;
     background-attachment: fixed;
-    transform: translateY(80px);
+    margin-top: 80px;
     /*La imagen se queda fija al hacer scroll*/
 
 }
@@ -392,7 +399,6 @@ header .contenedor :nth-child(8){
     justify-content: flex-start;
     row-gap: 1rem;
 
-    background-color: brown;
  }
 
  #contenedorServicios .servicio .contenedor_foto {
@@ -586,6 +592,14 @@ header .contenedor :nth-child(8){
     align-items: flex-start;
     justify-content: flex-start;
     color: white;
+
+
+}
+#contenedor_footer a{
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+    line-height: 1.6rem;
+    color: var(--color0);
 }
 
 #contenedor_footer #contacto  ul{
@@ -670,29 +684,44 @@ header .contenedor :nth-child(8){
 #contenedor_form{
     width: 100%;
     max-width: 2560px;
-    height: 500px;
-    background-color: blue;
+/*     background-color: blue; */
     display: flex;
     flex-direction: row;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    row-gap: 2rem;
+    column-gap: 4rem;
 }
 
 footer form {
     width: 40%;
     min-width: 320px;
     max-width: 800px;
-    background-color: darkslategrey;
+    /* background-color: darkslategrey; */
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: flex-start;
+    row-gap: 1rem;
 }
-
+#contenedor_form >img{
+    width: 40%;
+    height: 300px;
+    object-fit: cover;
+}
 footer form input ,textarea {
     width: 100%;
+    padding: 0.5rem 2rem;
+    font-size: 1.2rem;
+    font-family: var(--fuente1);
+}
 
+footer form textarea{
+    height: 100px;
+    width: 100%;
+    max-width: 100%;
+    min-width: 100%;
+    min-height: 100px;
+    max-height: 250px;
 }
 
 #boton_enviar {
